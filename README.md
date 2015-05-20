@@ -47,7 +47,8 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
     * @param candidate the selected candidate for the prefix.
 7. Keep repeating 3 and 4.
     * RunAutocomplete, DummyAutocomplete
-## Extra credit
+
+##Extra credit
 
 * Instead of showing the most recent candidates at the top, show the most frequently used candidates first. This will require you to change the value type of the trie from List<String> to List<something else implements Comparable>.
 ##Notes
