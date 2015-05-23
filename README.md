@@ -32,7 +32,7 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
     Pick: 
 ##Task
 
-1. Download the dictionary file containing a list of English words.
+1. Download the [dictionary file](../master/dict.txt) containing a list of English words.
 1. Create a class called `Autocomplete`
    * This class extends [`Trie`](../master/Trie.java) and implements [`IAutocomplete`](../master/IAutocomplete.java).
 1. Store all words from the dictionary file to LastNameAutocomplete.
@@ -46,7 +46,7 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
     * `@param prefix` the prefix.
     * `@param` candidate the selected candidate for the prefix.
 1. Keep repeating 3 and 4.
-* [`RunAutocomplete`](../master/t.java), [`DummyAutocomplete`](../master/t.java)
+* [`RunAutocomplete`](../tree/master/src/main/java/edu/emory/mathcs/cs323/trie/autocomplete/RunAutocomplete.java), [`DummyAutocomplete`](../tree/master/src/main/java/edu/emory/mathcs/cs323/trie/autocomplete/DummyAutocomplete.java)
 
 ##Extra credit
 
