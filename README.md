@@ -33,20 +33,20 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
 ##Task
 
 1. Download the dictionary file containing a list of English words.
-2. Create a class called LastNameAutocomplete (e.g., ChoiAutocomplete).
-   * This class extends Trie and implements IAutocomplete.
+2. Create a class called `Autocomplete`
+   * This class extends [`Trie`](../Trie.java) and implements `IAutocomplete`.
 4. Store all words from the dictionary file to LastNameAutocomplete.
-   * The value type is a collection of strings (e.g., List<String>).
+   * The value type is a collection of strings (e.g., `List<String>`).
 5. Get a prefix from the standard input and print 20 candidates matching the prefix if exists. The most recently selected candidate should appear at the top, the 2nd most recently selected candidate should appear at the 2nd, and so on. The rest of the candidate list should be filled with the shortest words matching the prefix. Make sure the same candidate does not appear more than once.
-    * Define the getCandidates method under LastNameAutocomplete.
-    * @param prefix the prefix of candidate words to return.
-    * @return the list of candidate words for the specific prefix.
+    * Define the `getCandidates` method under `Autocomplete`.
+    * `@param prefix` the prefix of candidate words to return.
+    * `@return` the list of candidate words for the specific prefix.
 6. Get the selected candidate from the standard input. If the candidate does not exist in the trie, store it. Also, remember this is the most recently selected candidate for that particular prefix.
-    * Define the pickCandidate method under LastNameAutocomplete that memorizes the specific candidate word for the specific prefix.
-    * @param prefix the prefix.
-    * @param candidate the selected candidate for the prefix.
+    * Define the `pickCandidate` method under `Autocomplete` that memorizes the specific candidate word for the specific prefix.
+    * `@param prefix` the prefix.
+    * `@param` candidate the selected candidate for the prefix.
 7. Keep repeating 3 and 4.
-    * RunAutocomplete, DummyAutocomplete
+    * `RunAutocomplete`, `DummyAutocomplete`
 
 ##Extra credit
 
