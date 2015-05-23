@@ -33,20 +33,20 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
 ##Task
 
 1. Download the dictionary file containing a list of English words.
-2. Create a class called `Autocomplete`
+1. Create a class called `Autocomplete`
    * This class extends [`Trie`](../master/Trie.java) and implements [`IAutocomplete`](../master/IAutocomplete.java).
-4. Store all words from the dictionary file to LastNameAutocomplete.
+1. Store all words from the dictionary file to LastNameAutocomplete.
    * The value type is a collection of strings (e.g., `List<String>`).
-5. Get a prefix from the standard input and print 20 candidates matching the prefix if exists. The most recently selected candidate should appear at the top, the 2nd most recently selected candidate should appear at the 2nd, and so on. The rest of the candidate list should be filled with the shortest words matching the prefix. Make sure the same candidate does not appear more than once.
+1. Get a prefix from the standard input and print 20 candidates matching the prefix if exists. The most recently selected candidate should appear at the top, the 2nd most recently selected candidate should appear at the 2nd, and so on. The rest of the candidate list should be filled with the shortest words matching the prefix. Make sure the same candidate does not appear more than once.
     * Define the `getCandidates` method under `Autocomplete`.
     * `@param prefix` the prefix of candidate words to return.
     * `@return` the list of candidate words for the specific prefix.
-6. Get the selected candidate from the standard input. If the candidate does not exist in the trie, store it. Also, remember this is the most recently selected candidate for that particular prefix.
+1. Get the selected candidate from the standard input. If the candidate does not exist in the trie, store it. Also, remember this is the most recently selected candidate for that particular prefix.
     * Define the `pickCandidate` method under `Autocomplete` that memorizes the specific candidate word for the specific prefix.
     * `@param prefix` the prefix.
     * `@param` candidate the selected candidate for the prefix.
-7. Keep repeating 3 and 4.
-    * [`RunAutocomplete`](../master/t.java), [`DummyAutocomplete`](../master/t.java)
+1. Keep repeating 3 and 4.
+* [`RunAutocomplete`](../master/t.java), [`DummyAutocomplete`](../master/t.java)
 
 ##Extra credit
 
@@ -56,8 +56,8 @@ If you enter the prefix "sh" again, the program now shows a different list of ca
 * Do not change the dictionary file. If you find anything peculiar about the dictionary file, please let me know so everyone works on the same copy of the dictionary file.
 * Please test your program yourself. I'll evaluate your program using my unit test and measure the performance (both speed and accuracy).
 * [`TrieNode`](../master/TrieNode.java) has two more methods now.
-* `getChildrenMap()` returns the children map of this node.
-* `isEndState()` returns true if this node contains the last character in any string.
+ * `getChildrenMap()` returns the children map of this node.
+ * `isEndState()` returns true if this node contains the last character in any string.
 * I wrote `LengthComparator`, which can be used for comparing string lengths.
 * Take a look at [Map](http://docs.oracle.com/javase/7/docs/api/java/util/Map.html) if you are not familiar with methods in the standard library.
 * If you are having trouble with implementing `getCandidates`, think about how to traverse the trie given any node.
