@@ -1,44 +1,38 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 
 public class AutoComplete extends Trie<Object> implements IAutocomplete<Object>{
 	
-	public List<String> AllWords;/*List of all words*/
-	public static String path;
-	
 	public static void main(String[] args) throws IOException{
-		Scanner input = new Scanner(System.in);
+		List<String> AllWords = new ArrayList<String>();/*List of all words*/
 		
 		/*Store all words in dict.txt into a List*/
-		path = "/Users/MilapNaik/Documents/workspace/Auto-Complete/src/dictionary.txt";
+		String filepath = "/Users/MilapNaik/Documents/workspace/Auto-Complete/src/dictionary.txt";
 		try{
-		FileReader reader = new FileReader(path);
-		BufferedReader textreader = new BufferedReader(reader);
+			FileReader reader = new FileReader(filepath);
+			BufferedReader textreader = new BufferedReader(reader);
 		
-		//String line;
-		int lines = 0;
-		while (textreader.readLine() != null){
-			lines++;
-			System.out.println("lines");
-			if (lines ==25)
-				break;
-		}
-		reader.close();
-		textreader.close();
+			String line;
+			int lines = 0;
+			while ((line = textreader.readLine()) != null){
+				AllWords.add(line);
+				System.out.println(AllWords.get(lines));
+				lines++;
+				if (lines ==25)
+					break;
+			}
+			reader.close();
+			textreader.close();
 		
 		}	
 		catch (IOException e) {
 			System.out.println(e.getMessage());
-		}
-		
-		
-		/*Close files*/
-		input.close();
-		
+		}		
 	}
 
 	
